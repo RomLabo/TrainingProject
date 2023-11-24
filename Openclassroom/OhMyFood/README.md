@@ -76,7 +76,3 @@ Cela fait apparaître une petite coche à droite du plat. Cette coche devra coul
 la droite vers la gauche. Pour cette première version, l’effet peut apparaître au survol
 sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec
 des points de suspension.  
-
-
-Lien vers la page web du site [OhMyFood](https://romlabo.github.io/Openclassroom_OhMyFood/)
-Pour voir la version mobile, utiliser l'outil de développement du navigateur.

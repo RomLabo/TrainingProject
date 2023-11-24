@@ -26,5 +26,3 @@ et celle que tu auras optimisée, fourni dans un rapport d’optimisation.
 Ce rapport devra inclure les comparaisons pour les 10 recommandations.
  
 Voir le [rapport](./rapport_optimisation.pdf)
- 
-Lien du site [version optimisée](https://romlabo.github.io/Openclassroom_LaChouetteAgence/) 

@@ -47,6 +47,3 @@ hébergement.
 * Mettre en place son environnement Front-End. 
 * Intégrer du contenu conformément à une maquette    
 * Implémenter une interface responsive. 
-
-
-Lien vers la page web hébergée en ligne sur GitHub Pages : [Reservia](https://romlabo.github.io/Openclassroom_Reservia/)
