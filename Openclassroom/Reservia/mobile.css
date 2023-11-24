@@ -1,0 +1,341 @@
+@media screen and (max-width: 599px)
+{
+    #header {
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    #logo {
+        height: 1rem;
+        width: 10%;
+        padding-left: 1.5rem;
+    }
+    #resLogo {
+        padding-top: 2rem;
+    }
+    #headerNavTab {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .tabItem {
+        padding-top: 2rem;
+        font-size: 1rem;
+        width: 50%;
+        border-bottom: 0.2rem #DEEBFF solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        order: 2;
+    }
+    .tabItemRegister {
+        order: 1;
+        padding-top: 2rem;
+        width: 70%;
+        border-left: none;
+        font-size: 1rem;
+        padding-right: 1rem;
+        text-align-last: end;
+    }
+
+    #lodging {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    h1 {
+        width: 80%;
+        font-size: 1.4rem;
+        padding-left: 5%;
+        margin-bottom: 1rem;
+    }
+    #subtitle {
+        padding-left: 5%;
+        font-size: 1rem;
+    }
+    #lodgingForm {
+        border-top: 0.14rem #F2F2F2 solid;
+        border-bottom: 0.14rem #F2F2F2 solid; 
+        border-radius: 1.5em;
+        background-color: #FFF;
+        width: 85%;
+        height: 3rem;
+        margin-left: 5%;
+        margin-bottom: 0;
+    }
+    label {
+        background-color: #F2F2F2;
+        width: 16%;
+        height: 3.2rem;
+        border-top-left-radius: 25%;
+        border-bottom-left-radius: 25%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type=text] {
+        font-size: 1rem;
+        height: 95%;
+        width: 65%;
+    }
+    ::placeholder {
+        font-size: 1.2em;
+    }
+    #search {
+        display: none;
+    }
+    #searchIcon {
+        display: flex;
+        width: 16%;
+        height: 3.2rem;
+        border-radius: 25%;
+        align-items: center;
+        justify-content: center;
+    }
+    #lodgingFilters {
+        flex-wrap: wrap;
+        height: auto;
+        margin-left: 0;
+        padding-left: 5%;
+        gap: 0.8rem;
+    }
+    #titleFilter {
+        width: 80%;
+        font-size: 1rem;
+    }
+    .filter {
+        gap: 0.8rem;
+        padding-right: 0.8rem;
+    }
+    .infoFilter {
+        font-size: 0.9rem;
+    }
+    .iconSize {
+        font-size: 1.2rem;
+    }
+    #infoLogo {
+        justify-content: center;
+        padding-left: 0;
+        gap: 0.5rem;
+        height: 3rem;
+        align-items: flex-start;
+    }
+    #infoCircle {
+        align-self: baseline;
+    }
+    #infoText {
+        font-size: 1rem;
+        width: 80%;
+        align-self: center;
+        height: 2rem;
+    }
+    #lodgingSection
+    {
+        flex-direction: column-reverse;
+        gap: 0;
+        margin-top: 0;
+    }
+    #lodgings
+    {
+        width: 90%;
+        background-color: #FFF;
+        padding: 5%;
+    }
+    .card
+    {
+        border-radius: 1.5rem;
+        box-shadow: 0.5rem 0.5rem 1.5rem #F2F2F2, -0.2rem -0.2rem 0.5rem #F2F2F2;
+        padding: 1.2%;
+        height: 12rem;
+        width: 97%;
+    }
+    .card img 
+    {
+        border-top-left-radius: 1.3rem;
+        border-top-right-radius: 1.3rem;
+        height: 60%;
+        width: 100%;
+    }
+    .infoCard {
+        font-size: 1rem;
+    }
+    #lodgingTown
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+    }
+    #more {
+        font-size: 1rem;
+    }
+    #lodgingPop
+    {
+        width: 90%;
+        border-radius: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #lodgingPopHeader {
+        padding-right: 0;
+    }
+    #lodgingPopCard {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 1.5rem;
+    }
+    .popCard {
+        width: 97%;
+        height: 9rem;
+        border-radius: 1.2rem;
+        padding: 1.2%;
+        box-shadow: 0.5rem 0.5rem 2rem #d9d9d9, -0.5rem -0.5rem 2rem #d9d9d9;
+    }
+    .popCard img {
+        border-bottom-left-radius: 1rem;
+        border-top-left-radius: 1rem;
+        width: 40%;
+        height: 100%;
+    }
+    .infoCardPop {
+        font-size: 0.9rem;
+    }
+    
+    #activity
+    {
+        width: 90%;
+        padding: 5%;
+        margin-top: 0;
+    }
+    h2 {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    #activityCards
+    {
+        flex-direction: column;
+        gap: 0;
+    }
+    .actCardStyle
+    {
+        width: 100%;
+        margin-top: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: 0.5rem 0.5rem 1.5rem #F2F2F2, -0.5rem -0.5rem 1.5rem #F2F2F2;
+    }
+    .imgSetting {
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
+    .infoActCard {
+        font-size: 1rem;
+    }
+    .actCardBC {
+        gap: 0;
+        width: 100%;
+    }
+    #actCardB, #actCardC,#actCardE, #actCardF, .actCardA {
+        height: 12rem;
+    }
+    #actCardB img, #actCardC img, #actCardE img, #actCardF img, .actCardA img 
+    {
+        height: 80%;
+    }
+    h3 
+    {
+        font-size: 1.1em;
+    }
+
+    #foot
+    {  
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    .footerBlockList
+    {
+        width: 75%;
+        font-size: 1rem;
+    }
+    
+    .tabItem:hover {
+        border-top: none;
+        border-bottom: 0.2rem solid #DEEBFF;
+        color: #000;
+    }
+    .tabItemRegister:hover {
+        border-top: 0.15rem solid #FFF;
+    }
+    .filter:hover .iconFilter{
+        color: #0065FC;
+        background-color: #DEEBFF;
+        transform-origin: none;
+        transform: none;
+    }
+    #lodgingPopCard:hover .popCard, #lodgingPopCard:hover .popCard:hover {
+        filter: none;
+        opacity: 1;
+        box-shadow: 0.5rem 0.5rem 2rem #d9d9d9, -0.5rem -0.5rem 2rem #d9d9d9;
+    }
+    #lodgingTown:hover .card, #lodgingTown:hover .card:hover {
+        filter: none;
+        opacity: 1;
+        box-shadow: 0.5rem 0.5rem 1.5rem #F2F2F2, -0.2rem -0.2rem 0.5rem #F2F2F2;
+    }
+    #activityCards:hover .actCardStyle, #activityCards:hover .actCardStyle:hover {
+        filter: none;
+        opacity: 1;
+        box-shadow: 0.5rem 0.5rem 1.5rem #F2F2F2, -0.5rem -0.5rem 1.5rem #F2F2F2;
+    }
+    #more:hover, #logoPop:hover {
+        color: #000;
+    }
+    .footLink:hover {
+        font-weight: normal;
+        cursor: pointer;
+    }
+    .tabItem:active {
+        border-bottom: 0.2rem solid #0065FC;
+        color: #0065FC;
+    }
+    .tabItemRegister:active {
+        color: #000;
+    }
+    .filter:active .iconFilter{
+        color: #DEEBFF;
+        background-color: #0065FC;
+        transform-origin: center;
+        transform: rotate(15deg);
+    }
+    #lodgingTown:active .card, #lodgingPopCard:active .popCard, #activityCards:active .actCardStyle {
+        filter: grayscale(20%);
+        opacity:.5;
+        box-shadow:none;
+    }
+    #lodgingTown:active .card:active, #lodgingPopCard:active .popCard:active, #activityCards:active .actCardStyle:active {
+        filter: grayscale(0);
+        opacity:1;
+        box-shadow:0 0.5rem 1rem 0 rgba(0,0,0,0.125);
+    }
+    #more:active, #logoPop:active {
+        color: #0065FC;
+    }
+    .footLink:active {
+        font-weight: 800;
+    }
+    @keyframes jump {
+        from {
+            margin-bottom: 0%;
+        }
+        to {
+            margin-bottom: 30%;
+        }
+    }    
+}
+  
+     
+
