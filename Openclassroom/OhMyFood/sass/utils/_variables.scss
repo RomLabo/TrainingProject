@@ -1,0 +1,40 @@
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$btn-background: linear-gradient(#ea73db, $primary-color);
+
+
+$card-shadow-color: #e5e5e5;
+$card-shadow-size: 0.2rem;
+$card-shadow-blur: 0.6rem;
+
+$btn-shadow-color: #c5c5c5;
+$btn-shadow-blur-hover: 0.4rem;
+
+
+$font-title: 'Shrikhand', cursive;
+$font-logo: 'Shrikhand', cursive;
+$font-text: 'Roboto', sans-serif;
+$font-size: (section-heading: 1.2rem, icon-xl: 1.4rem, icon-l: 0.9rem, icon-s: 0.5rem, icon-m: 0.7rem, btn: 0.8rem, h3: 1.1rem);
+
+$card-style: (
+    restaurant-cards: (
+        width: 98%,
+        height: 14rem,
+        bd-rad: 1rem,
+        bg: #fff,
+    ),
+    fonctionnement-cards: (
+        width: 240px,
+        height: 4rem,
+        bd-rad: 1.2rem,
+        bg: #f6f6f6,
+    ),
+    menu-cards: (
+        width: 100%,
+        height: 3.6rem,
+        bd-rad: 1rem,
+        bg: #fff,
+    )
+);
+

@@ -1,0 +1,31 @@
+.footer { 
+    width: 100%;
+    height: auto;
+    @media print {
+        display: none;
+    }
+}
+.footer-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 1rem 0 1rem 0;
+    &__item {
+        @include border;
+        @include size(footer-btn);
+        @include shape(main-btn);
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }    
+        &::after {
+            @include shape-after(btn-after);
+        }
+    }
+}

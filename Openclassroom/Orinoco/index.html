@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Achat parmis des milliers de produits en stock. Retrouvez tout les produits hight tech du moment sur notre site" />
+        <title>OriTech - Entreprise de commerce en ligne - Vente des meilleurs appareils hight tech</title>
+        <link rel="icon" href="./frontEnd/img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="./frontEnd/public/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="nav__img"><img src="./frontEnd/img/logo.png" alt="Logo de la société Orinoco" /></a>
+                <button id="nav-btn" class="nav__btn" type="button" data-toggle="" data-target="" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="nav-item" class="nav__list">
+                    <li class="list-item nav-list__sign"><a class="item__link" href="#"><i class="fas fa-user-plus"></i>S'inscrire</a></li>
+                    <li class="list-item nav-list__item"><a class="item__link" href="#"><i class="fas fa-user"></i>Mon compte</a></li>
+                    <li class="list-item nav-list__cart"><span id="count" class="nav-list__cart__count"></span><a class="item__link" href="./frontEnd/shopping-cart.html"><i class="fas fa-shopping-cart"></i>Panier</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <main id="main" class="main">
+            <h1 class="main__title">Bienvenue sur Oritech</h1>
+            <p class="main__text">Découvrez les meilleurs produits high tech du moment</p>
+            <section class="section">
+                <img class="section__img" src="./frontEnd/img/home-background.jpg" alt="Appareil photo vintage sur un plancher en bois" />
+                <h2 class="section__title">Appareils photos vintage</h2>
+                <div id="products" class="section__products">
+                    <template id="template-product">
+                        <a href="#" id="product-id" class="product-content" >
+                            <article  class="product">
+                                <img id="product-image" src="./frontEnd/img/logo.png" alt="Un appareil photo vintage" class="product__img"/>
+                                <div class="product__info">
+                                    <h3 id="product-name"></h3>
+                                    <p id="product-price"></p>
+                                </div>
+                            </article>
+                        </a>
+                    </template>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <ul class="footer-list">
+                <li class="footer-list__item"><a href="#">Devenir partenaire</a></li>
+                <li class="footer-list__item"><a href="#">Contact</a></li>
+                <li class="footer-list__item"><a href="#">Mentions légales</a></li>
+            </ul>
+        </footer>
+        <script src="./frontEnd/js/scrolling-menu.js"></script>
+        <script src="./frontEnd/js/index.js"></script>
+    </body>
+</html>

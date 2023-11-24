@@ -1,0 +1,69 @@
+@mixin mobile-only {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin box-shadow($color: $card-shadow-color, $shadow-size: $card-shadow-size, $shadow-blur: $card-shadow-blur) {
+    box-shadow: $shadow-size $shadow-size $shadow-blur $color;
+}
+
+@mixin border($width: $btn-border-width, $style: $btn-border-style, $color: $btn-border-color) {
+    border: $btn-border-width $btn-border-style $btn-border-color;
+}
+
+@mixin shape($name) {
+    $style: map-get($shape-style, $name);
+    display: map-get($style, display);
+    flex-direction: map-get($style, flex-direction);
+    justify-content: map-get($style, justify-content);
+    align-items: map-get($style, align-items);
+    gap: map-get($style, gap);
+    border-radius: map-get($style, bd-rad);
+    background-color: map-get($style, bg);
+    position: map-get($style, position);
+    z-index: map-get($style, z-index);
+    cursor: map-get($style, cursor);
+    font-size: map-get($style, font-size);
+    font-weight: map-get($style, font-weight);
+}
+
+@mixin size($name) {
+    $size: map-get($shape-size, $name);
+    width: map-get($size, width);
+    height: map-get($size, height);
+}
+
+@mixin shape-after($name) {
+    $style: map-get($after-shape, $name);
+    content: map-get($style, is-content);
+    position: map-get($style, position);
+    z-index: map-get($style, z-index);
+    top: map-get($style, pos-top);
+    right: map-get($style, pos-right);
+    bottom: map-get($style, pos-bottom);
+    left: map-get($style, pos-left);
+    background: map-get($style, bg);
+    border-radius: map-get($style, border-radius);
+    opacity: map-get($style, opacity);
+    transition: map-get($style, transition);
+}
+
+
+@mixin shape-card($name) {
+    $style: map-get($card-shape, $name);
+    flex-direction: map-get($style, flex-direction);
+    justify-content: map-get($style, justify-content);
+    align-items: map-get($style, align-items);
+    gap: map-get($style, gap);
+    width: map-get($style, width);
+    height: map-get($style, height);
+    padding: map-get($style, card-padding);
+    background-color: map-get($style, background-color);
+    border-radius: map-get($style, border-radius);
+    text-align: map-get($style, text-align);
+}
+
+    
+
+  

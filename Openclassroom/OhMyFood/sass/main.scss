@@ -1,0 +1,17 @@
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/base";
+@import "./base/fonts";
+@import "./base/typography";
+@import "./base/animations";
+
+@import "./layout/loading-spinner";
+@import "./layout/footer";
+
+@import "./pages/header-home";
+@import "./pages/presentation-section-home";
+@import "./pages/fonctionnement-section-home";
+@import "./pages/restaurant-section-home";
+

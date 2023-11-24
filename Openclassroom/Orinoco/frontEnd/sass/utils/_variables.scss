@@ -1,0 +1,193 @@
+$primary-color: #D2834C;
+$secondary-color: #8f5bfe;
+$tertiary-color: #E7B992;
+
+
+
+
+$btn-border-width: 2px;
+$btn-border-style: solid;
+$btn-border-color: #2e2e2e;
+
+$message-border-color: #fff;
+$message-border-width: 0.25rem;
+
+$shape-style: (
+    main-btn: (
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        gap: unset,
+        bd-rad: 0.4rem,
+        bg: #D2834C,
+        position: relative,
+        z-index: 1,
+        cursor: pointer,
+        font-size: 1rem,
+        font-weight: unset,
+    ),
+    table-btn: (
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        gap: unset,
+        bd-rad: 0 0.6rem 0.6rem 0,
+        bg: #fff,
+        position: unset,
+        z-index: unset,
+        cursor: pointer,
+        font-size: unset,
+        font-weight: bold,
+    ),
+    cart-product: (
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        gap: unset,
+        bd-rad: 0,
+        bg: #fff,
+        position: unset,
+        z-index: unset,
+        cursor: unset,
+        font-size: unset,
+        font-weight: bold,
+    ),
+    cart-product-title: (
+        display: flex,
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        gap: unset,
+        bd-rad: 0.6rem 0 0 0.6rem,
+        bg: #fff,
+        position: unset,
+        z-index: unset,
+        cursor: unset,
+        font-size: unset,
+        font-weight: bold,
+    ),
+    product-more-info: (
+        display: flex,
+        flex-direction: column,
+        justify-content: unset,
+        align-items: center,
+        gap: 1rem,
+        bd-rad: 0 0 0.6rem 0.6rem,
+        bg: #fff,
+        position: unset,
+        z-index: unset,
+        cursor: unset,
+        font-size: unset,
+        font-weight: bold,       
+    ),
+    product-info: (
+        display: flex,
+        flex-direction: row,
+        justify-content: space-between,
+        align-items: baseline,
+        gap: 1rem,
+        bd-rad: 0 0 0.6rem 0.6rem,
+        bg: #fff,
+        position: unset,
+        z-index: unset,
+        cursor: unset,
+        font-size: unset,
+        font-weight: bold,       
+    )
+);
+
+$shape-size: (
+    menu-btn: (
+        width: 8rem,
+        height: 2.5rem,
+    ),
+    message-btn: (
+        width: 50px,
+        height: 2.8rem,
+    ),
+    footer-btn: (
+        width: 10rem,
+        height: 2.5rem,
+    ),
+    table-btn: (
+        width: 10%,
+        height: 6.05rem,
+    ), 
+    table-price: (
+        width: 30%,
+        height: 6.05rem,
+    ),
+    product-more-info: (
+        width: 267px,
+        height: auto,
+    ),
+    product-info: (
+        width: 267px,
+        height: 35px,
+    )
+);
+
+
+$after-shape: (
+    btn-after: (
+        is-content: "",
+        position: absolute,
+        z-index: -1,
+        pos-top: 0,
+        pos-right: 0,
+        pos-bottom: 0,
+        pos-left: 0,
+        bg: linear-gradient(to bottom right, #D2834C 20%, #8f5bfe 80%),
+        border-radius: 0.4rem,
+        opacity: 0,
+        transition: opacity 250ms,
+    )
+);
+
+$card-shape: (
+    window-message: (
+        flex-direction: column,
+        justify-content: center,
+        align-items: center,
+        gap: 1rem,
+        width: 60%,
+        height: auto,
+        card-padding: 2%,
+        background-color: #fff,
+        border-radius: 1rem,
+        text-align: center, 
+    ),
+    empty-message: (
+        flex-direction: row,
+        justify-content: center,
+        align-items: center,
+        gap: 1rem,
+        width: 60%,
+        height: 5rem,
+        card-padding: 2%,
+        background-color: #fff,
+        border-radius: 1rem,
+        text-align: center,
+    ),
+    window-alert: (
+        flex-direction: row,
+        justify-content: space-between,
+        align-items: center,
+        gap: unset,
+        width: 60%,
+        height: 5rem,
+        card-padding: 2%,
+        background-color: #fff,
+        border-radius: 1rem,
+        text-align: center, 
+    )
+);
+
+
+
+    
+
+

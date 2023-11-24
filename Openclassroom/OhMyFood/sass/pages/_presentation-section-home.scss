@@ -1,0 +1,36 @@
+.presentation-section {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem 3rem;
+    &__heading {
+        font-size: map-get($font-size, section-heading);
+        font-weight: 800;
+        padding: 0 10%;
+    }
+    &__text {
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+    &__btn {
+        width: 62%;
+        max-width: 280px;
+        height: 2.5rem;
+        border-radius: 2rem;
+        background: $btn-background;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: map-get($font-size, btn);
+        @include box-shadow($btn-shadow-color);
+        &:hover {
+            background: lighten($primary-color, 10%);
+            @include box-shadow($btn-shadow-color, $btn-shadow-blur-hover)
+        }
+    }
+}

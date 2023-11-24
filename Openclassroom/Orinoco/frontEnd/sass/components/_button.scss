@@ -1,0 +1,20 @@
+button {
+    @include border;
+    @include size(message-btn);
+    @include shape(main-btn);
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }    
+    &::after {
+        @include shape-after(btn-after);
+    }
+    &:disabled {
+        opacity: 0.1;
+        cursor: default;
+        &:hover::after {
+            opacity: 0;
+        }
+    }
+}

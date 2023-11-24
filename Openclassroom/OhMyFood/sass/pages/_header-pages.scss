@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20%;
+    padding: 1rem;
+    @include desktop-only {
+        gap: 32%;
+    }
+    &__btn {
+        color: #000;
+        @include desktop-only {
+            font-size: 1.5rem;
+        }
+        &:hover {
+            color: lighten($color: #000000, $amount: 30%);
+        }
+    }
+    &__image {
+        width: 50%;
+        max-width: 270px;
+    }
+}

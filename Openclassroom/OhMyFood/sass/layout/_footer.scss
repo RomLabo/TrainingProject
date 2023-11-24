@@ -1,0 +1,54 @@
+.footer {
+    background-color: #353535;
+    padding: 1rem 1.5rem 3rem;
+    &__heading {
+        @include desktop-only {
+            font-size: 1.2rem;
+        }
+        font-family: $font-logo;
+        color: #fff;
+        margin: 0 0 1rem 0;
+        font-weight: 500;
+    }
+    &__list {
+        @include desktop-only {
+            font-size: 0.9rem;
+        }
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        list-style-type: none;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        font-size: 0.8rem;
+        font-weight: 400;
+        li {
+            width: 55%;
+            max-width: 280px;
+            display: flex;
+            gap: 0.5rem;
+            align-items: baseline;
+            &:hover i {
+                color: darken($color: #fff, $amount: 20%);
+            }
+            &:hover a {
+                color: darken($color: #fff, $amount: 20%);
+            }
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+.size-m {
+    font-size: map-get($font-size, icon-m);
+}
+.size-s {
+    @include desktop-only {
+        font-size: map-get($font-size, icon-m);
+    }
+    font-size: map-get($font-size, icon-s);
+}

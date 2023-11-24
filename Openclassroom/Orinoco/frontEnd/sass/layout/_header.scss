@@ -1,0 +1,111 @@
+.nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 95%;
+    padding: 1rem;
+    @include mobile-only {
+        width: 90%;
+    }
+    &__btn {
+        @media print {
+            display: none;
+        }
+        display: none;
+        font-size: 1.8rem;
+        width: 3rem;
+        height: 2.8rem;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #2e2e2e ;
+        background-color: #D2834C;
+        border-radius: 0.4rem;
+        i {
+            color: #2e2e2e;
+        }
+        @include mobile-only {
+            @media print {
+                display: none;
+            }
+            display: flex;
+        }
+    }
+    &__list {
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        gap: 1rem;
+        @media print {
+            display: none;
+        }
+        @include mobile-only {
+            @media print {
+                display: none;
+            }
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__img {
+        align-self: center;
+    }
+} 
+
+.list-item {
+    @include border;
+    @include size(menu-btn);
+    @include shape(main-btn);
+    @include mobile-only {
+        width: 80%;
+    }
+    @media print {
+        display: none;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }    
+    &::after {
+        @include shape-after(btn-after);
+    }
+}
+
+.nav-list__item {
+    i {
+        color: #2e2e2e;
+        margin-right: 0.2rem;
+    }   
+}
+
+.nav-list__sign {
+    i {
+        color: #8f5bfe;
+        margin-right: 0.2rem;
+        text-shadow: 2px 2px 2px #2E2E2E;
+    }
+}
+
+.nav-list__cart {
+    i {
+        color: #2e2e2e;
+        margin-right: 0.2rem;
+    }
+    &__count {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        background-color: #8f5bfe;
+        box-shadow: 2px 2px 2px #2E2E2E;
+        position: absolute;
+        border-radius: 50%;
+        top: -9px;
+        right: -9px;
+        padding: 0.2rem;
+    }
+}

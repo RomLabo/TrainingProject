@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Achat parmis des milliers de produits en stock. Retrouvez tout les produits hight tech du moment sur notre site" />
+        <title>OriTech - Entreprise de commerce en ligne - Vente des meilleurs appareils hight tech</title>
+        <link rel="icon" href="img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="./public/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <a href="../index.html" class="nav__img"><img src="img/logo.png" alt="Logo de la société Orinoco" /></a>
+                <button id="nav-btn" class="nav__btn" type="button" data-toggle="" data-target="" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="nav-item" class="nav__list">
+                    <li class="list-item nav-list__sign"><a class="item__link" href="#"><i class="fas fa-user-plus"></i>S'inscrire</a></li>
+                    <li class="list-item nav-list__item"><a class="item__link" href="#"><i class="fas fa-user"></i>Mon compte</a></li>
+                    <li class="list-item nav-list__cart"><span id="count" class="nav-list__cart__count"></span><a class="item__link" href="shopping-cart.html"><i class="fas fa-shopping-cart"></i>Panier</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <main id="main" class="main">
+            <h1 class="main__title">Bienvenue sur Oritech</h1>
+            <p class="main__text">Découvrez les meilleurs produits high tech du moment</p>
+            <section class="section">
+                <img class="section__img" src="./img/home-background.jpg" alt="Appareil photo vintage sur un plancher en bois" />
+                <h2 class="section__title">Appareils photos vintage</h2>
+                <div id="cart-info" class="empty-cart">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Votre panier est vide.</p>
+                </div>
+                <table id="tableStor" class="cart-products">
+                    <template id="productTemplate">
+                        <tr id="refStor" class="cart-product">
+                            <td id="nameStor" class="cart-product__title"></td>
+                            <td id="quantityStor" class="cart-product__quantity"></td>
+                            <td id="optionStor" class="cart-product__price"></td>
+                            <td id="priceStor" class="cart-product__price"></td>
+                            <td class="cart-product__btn"><button id="remove-item" name="Remove" class="remove" title="Supprimer"><i class="fas fa-times"></i></button></td>
+                        </tr>
+                    </template>
+                </table>
+                <button id="remove-products" type="button" class="footer-list__item">Vider le panier</button>
+            </section>
+            <div class="section">
+                <div id="sumPriceProducts"></div>
+                <form id="form" class="form" action="/ma-page-de-traitement" method="post">
+                    <input id="input-detect" type="hidden" name="user_vide" value="">
+                    <div class="form-content">
+                        <label for="user_name" class="form-content__label">Nom :</label>
+                        <input type="text" name="user_name" id="user_name" class="form-content__input" placeholder="Haddock" minlength="3" maxlength="30" required />
+                        <i id="name-valid" class="form-content__icon fas fa-check-circle"></i>
+                    </div>
+                    <div class="form-content">
+                        <label for="user_first-name" class="form-content__label">Prénom :</label>
+                        <input type="text" name="user_first-name" id="user_first-name" class="form-content__input" placeholder="Archibald" minlength="3" maxlength="30" required />
+                        <i id="first-name-valid" class="form-content__icon fas fa-check-circle"></i>
+                    </div>
+                    <div class="form-content">
+                        <label for="user_mail" class="form-content__label">E-mail :</label>
+                        <input type="email" name="user_mail" id="user_mail" class="form-content__input" placeholder="millesabord@mail.fr" minlength="5" maxlength="40" required />
+                        <i id="mail-valid" class="form-content__icon fas fa-check-circle"></i>
+                    </div>
+                    <div class="form-content">
+                        <label for="user_address" class="form-content__label">Adresse :</label>
+                        <input type="text" name="user_address" id="user_address" class="form-content__input" placeholder="1 rue de Moulinsart" minlength="5" maxlength="60" required />
+                        <i id="address-valid" class="form-content__icon fas fa-check-circle"></i>
+                    </div>
+                    <div class="form-content">
+                        <label for="user_postcode" class="form-content__label">Code postal :</label>
+                        <input type="text" name="user_postcode" id="user_postcode" class="form-content__input" placeholder="75000" minlength="5" maxlength="5"  required />
+                        <i id="postcode-valid" class="form-content__icon fas fa-check-circle"></i>
+                    </div>
+                    <div class="form-content">
+                        <label for="user_city" class="form-content__label">Ville :</label>
+                        <input type="text" name="user_town" id="user_city" class="form-content__input" placeholder="Paris" minlength="3" maxlength="30" required />
+                        <i id="city-valid" class="form-content__icon fas fa-check-circle"></i>
+                    </div>
+                </form>
+                <p class="section__text">Appuyer sur ENTREE pour valider le formulaire.</p>
+                <button type="button" id="purchase-btn" title="Passer la commande" class="footer-list__item" disabled>Commander</button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <ul class="footer-list">
+                <li class="footer-list__item"><a href="#">Devenir partenaire</a></li>
+                <li class="footer-list__item"><a href="#">Contact</a></li>
+                <li class="footer-list__item"><a href="#">Mentions légales</a></li>
+            </ul>
+        </footer>
+        <script src="./js/scrolling-menu.js"></script>
+        <script src="./js/shopping-cart.js"></script>
+    </body>
+</html>

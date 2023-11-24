@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Oh My Food - services de restauration haut de gamme - commande de repas en ligne - composez votre menu</title>
+        <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+        <script src="https://kit.fontawesome.com/371c3c0fc4.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <!--loading spinner-->
+        <div class="load">
+            <div class="load__spinner load__spinner--1">
+                <span>o</span>
+            </div>
+            <div class="load__spinner load__spinner--2">
+                <span>h</span>
+            </div>
+            <div class="load__spinner load__spinner--3">
+                <span>m</span>
+            </div>
+            <div class="load__spinner load__spinner--4">
+                <span>y</span>
+            </div>
+            <div class="load__spinner load__spinner--5">
+                <span>f</span>
+            </div>
+            <div class="load__spinner load__spinner--6">
+                <span>o</span>
+            </div>
+            <div class="load__spinner load__spinner--7">
+                <span>o</span>
+            </div>
+            <div class="load__spinner load__spinner--8">
+                <span>d</span>
+            </div>
+        </div>
+        <!--header-->
+        <header class="header">
+            <img class="header__img" src="img/logo/ohmyfood@2x.svg" alt="Company's logo" />
+            <div class="header__location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Paris, Belleville</span>
+            </div>
+        </header>
+
+        <!--Main-->
+        <main>
+            <section class="presentation-section">
+                <h1 class="presentation-section__heading">Réservez le menu qui vous convient</h1>
+                <p class="presentation-section__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a class="presentation-section__btn" href="#restaurant">Explorez nos restaurants</a>
+            </section>
+            <section class="fonctionnement-section">
+                <h2 class="fonctionnement-section__heading">Fonctionnement</h2>
+                <ol class="fonctionnement-section__list">
+                    <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                    <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                    <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+                </ol>
+            </section>
+            <section id="restaurant" class="restaurant-section">
+                <h2 class="restaurant-section__heading">Restaurants</h2>
+                <div class="restaurant-section__cards">
+                    <article class="cards">
+                        <a href="la-palette-du-goût.html">
+                            <div class="cards__image">
+                                <img src="img/restaurants/la-palette-du-gout.jpg" alt="image of the restaurant" />
+                                <span>Nouveau</span>
+                            </div>
+                            <div class="cards__footer">
+                                <div>
+                                    <h3>La palette du goût</h3>
+                                    <span>Ménilmontant</span>
+                                </div>
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </a>    
+                    </article>
+                    <article class="cards">
+                        <a href="la-note-enchantée.html">
+                            <div class="cards__image">
+                                <img src="img/restaurants/la-note-enchantée.jpg" alt="image of the restaurant" />
+                                <span>Nouveau</span>
+                            </div>
+                            <div class="cards__footer">
+                                <div>
+                                    <h3>La note enchantée</h3>
+                                    <span>Charonne</span>
+                                </div>
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </a>        
+                    </article>
+                    <article class="cards">
+                        <a href="a-la-française.html">
+                            <div class="cards__image">
+                                <img src="img/restaurants/a-la-française.jpg" alt="image of the restaurant" />
+                            </div>
+                            <div class="cards__footer">
+                                <div>
+                                    <h3>À la française</h3>
+                                    <span>Cité Rouge</span>
+                                </div>
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </a>        
+                    </article>
+                    <article class="cards">
+                        <a href="le-délice-des-sens.html">
+                            <div class="cards__image">
+                                <img src="img/restaurants/le-delice-des-sens.jpg" alt="image of the restaurant" />
+                            </div>
+                            <div class="cards__footer">
+                                <div>
+                                    <h3>Le délice des sens</h3>
+                                    <span>Folie-Méricourt</span>
+                                </div>
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </a>        
+                    </article>
+                </div>
+            </section>
+        </main>
+        
+        <!--footer-->
+        <footer class="footer">
+            <h4 class="footer__heading">ohmyfood</h4>
+            <ul class="footer__list">
+                <li>
+                    <i class="fas fa-utensils size-m"></i>
+                    <a href="#">Proposer un restaurant</a>
+                </li>
+                <li>
+                    <i class="fas fa-hands-helping size-s"></i>
+                    <a href="#">Devenir partenaire</a>
+                </li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mailto:zzzzz@zzzz.fr">Contact</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

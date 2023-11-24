@@ -1,0 +1,30 @@
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: $tertiary-color;
+    animation: load 1ms 4s both;
+    position: fixed;
+    opacity: 0.9;
+    &__spinner{
+        @include desktop-only {
+            font-size: 4rem;
+        }
+        font-family: $font-logo;
+        overflow: hidden;
+        font-size: 3rem;
+        overflow: inherit;
+        animation: 400ms cubic-bezier(.35,.3,.32,.99) 100ms 20 alternate move;
+        @for $i from 1 through 8 {
+            &--#{$i} {
+                animation-delay: 50ms * $i;
+            }
+        }
+    }
+}
+ 
+
+
