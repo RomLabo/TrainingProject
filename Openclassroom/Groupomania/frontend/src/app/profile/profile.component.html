@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="main-profile">
+    <article class="profile">
+        <h2 class="profile__title">Profil</h2>
+        <div class="profile__content">
+            <p>{{ userName }}</p>
+            <p>{{ userFirstName }}</p>
+            <button class="profile-btn" type="button" id="deleteBtn" (click)="deleteClick()" title="Supprimer"><i class="fas fa-trash-alt"></i></button>
+            <div class="option-confirmation" id="delete-div" *ngIf="clickedBouton === true">
+                <p class="option-confirmation__text">Etes vous sûr de vouloir supprimer votre profil ?</p>
+                <div class="option-confirmation__btn">
+                    <button class="profile-btn" (click)="onDeleteProfile()" title="Oui"><i class="fas fa-check"></i></button>
+                    <button class="profile-btn" (click)="giveUpDelete()" title="Non"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="profile__content" *ngIf="isAdmin === 1">
+            <form class="search-user-form" [formGroup]="searchForm" (ngSubmit)="onGetOneProfile()">
+                <input id="search-user" class="profile-input" name="search-user" placeholder="Rechercher un utilisateur" type="text" aria-label="Recherche un utilisateur" formControlName="searchUser">
+                <button class="profile-btn" name="addComment" type="submit" title="Rechercher"><i class="fas fa-search"></i></button>
+            </form>
+            <p id="error-message" *ngIf="errorMessage != null ">{{ errorMessage }}</p>
+            <div *ngIf="userSearched != null ">
+                <h4>{{ userSearchedName }}</h4>
+                <p>{{ userSearchedFirstName }}</p>
+                <button class="profile-btn" [disabled]="userSearchedIsAdmin === 1" (click)="adminDeleteClick()" title="Supprimer"><i class="fas fa-trash-alt"></i></button>
+                <div class="option-confirmation" *ngIf="adminClickedBouton === true">
+                    <p class="option-confirmation__text">Etes vous sûr de vouloir supprimer ce profil ?</p>
+                    <div class="option-confirmation__btn">
+                        <button class="profile-btn" (click)="onDeleteOneProfile()" title="Oui"><i class="fas fa-check"></i></button>
+                        <button class="profile-btn" (click)="adminGiveUpDelete()" title="Non"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <aside class="profile-aside">
+        <h2 class="profile-aside__title">Membres</h2>
+        <ul class="profile-aside__list">
+          <app-user-list-item class="list-group-item" *ngFor="let user of users$ | async"
+                              [userName]="user.name"
+                              [userFirstName]="user.first_name" ></app-user-list-item>
+        </ul>
+    </aside>
+</div>
+

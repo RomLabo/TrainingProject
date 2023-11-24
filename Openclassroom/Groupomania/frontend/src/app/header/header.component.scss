@@ -1,0 +1,121 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    height: 7rem;
+    width: 98%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: #fff;
+    @include mobile-only {
+        gap: 0;
+        height: auto;
+        flex-wrap: wrap;
+        margin: 0;
+        width: 100%;
+        position: static;
+    }
+    &__img {
+        width: 30%;
+        height: 4rem;
+        object-fit: cover;
+        @include mobile-only {
+            width: 96%;
+            height: 6rem;
+        }
+    }
+    &__text {
+        width: 10%;
+    }
+    &__nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 30%;
+        @include tablet-only {
+            width: 50%;
+        }
+        @include mobile-only {
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: 2px;
+                left: 0;
+                background-color: #ffd7d7;
+                height: 2px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.nav__item {
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 0.15rem #FFF solid;
+    position: relative;
+    color: $text-color;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: attr(title);
+        color: #fd2d01;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-top: 0.15rem solid #fd2d01;
+        border-left: 0.15rem solid #fff;
+        border-right: 0.15rem solid #fff;
+        border-bottom: 0.15rem solid #fff;
+        width: 96%;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 250ms;
+        @include mobile-only{
+            border-top: 0.15rem solid #fff;
+            border-bottom: 0.15rem solid #fd2d01;
+        }
+    }
+}
+.nav__item-menu {
+    width: 30%;
+    @include mobile-only {
+        width: 27.5%;
+    }
+}
+
+.nav__item-logout {
+    font-weight: bold;
+    width: 40%;
+}
+
+h1 {
+    margin: 5rem 0 0 0;
+    font-size: 1.6rem;
+    padding: 3rem;
+    @include mobile-only {
+        margin: 0;
+        padding: 1rem;
+    }
+}

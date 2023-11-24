@@ -1,0 +1,24 @@
+<li id="list-item" class="list-group-item" >
+    <a [routerLink]="[postId]" class="list-item">
+        <h3 class="list-item__title">{{ postTitleText }}</h3>
+        <div class="list-item__img" *ngIf="postImageUrl !== 'imageUrl'">
+            <img [src]="postImageUrl" alt="L'image du post" class="list-img">
+        </div>
+        <p class="list-item__text">{{ postContentText }}</p>
+        <div class="list-item__info">
+            <p class="info-text">Posté par {{ postUserName }} {{ postUserFirstName }}  
+                <span *ngIf="postDay < 1 && postHour < 1 && postMinute < 1">maintenant</span>
+                <span *ngIf="postDay > 0 || postHour > 0 || postMinute > 0">il y a </span>
+                <span *ngIf="postDay > 0">{{ postDay }} jour<span *ngIf="postDay > 1">s</span></span>
+                <span *ngIf="postDay > 0 && postHour > 0 && postHour < 24"> et </span>
+                <span *ngIf="postHour > 0 && postHour < 24">{{ postHour }} heure<span *ngIf="postHour > 1">s</span></span>
+                <span *ngIf="postHour > 0 && postMinute > 0 && postMinute < 60"> et </span>
+                <span *ngIf="postMinute > 0 && postMinute < 60">{{ postMinute }} minute<span *ngIf="postMinute > 1">s</span></span>
+            </p>
+            <div class="info-like">
+                <i class="info-like__icon fas fa-arrows-alt-v" ></i>
+                <span class="info-like__number">{{ postLike }}</span>
+            </div>
+        </div>
+    </a>
+</li>

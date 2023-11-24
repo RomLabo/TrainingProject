@@ -1,0 +1,28 @@
+<div class="home-form">
+    <img class="home-form__img" src="../../assets/background.jpg" alt="Image d'arrière plan">
+    <div class="home-form__form">
+        <img class="form-logo" src="../../assets/logo-title.png" alt="Nom de l'entreprise">
+        <form class="form-content" [formGroup]="userForm" (ngSubmit)="onSignin()">
+            <input id="name" class="form-content__input" name="name" type="text" placeholder="Nom" aria-label="Nom" formControlName="name">
+            <div *ngIf="name!.invalid && name!.dirty" class="invalid-message">
+                Le nom doit comporter entre 3 et 25 lettres ex: Addock.
+            </div>
+            <input id="first-name" class="form-content__input" name="first-name" type="text" placeholder="Prénom" aria-label="Prénom" formControlName="firstName">
+            <div *ngIf="firstName!.invalid && firstName!.dirty" class="invalid-message">
+                Le prénom doit comporter entre 3 et 25 lettres ex: Archibald.
+            </div>
+            <input id="email" class="form-content__input" name="email" type="text" placeholder="Adresse e-mail" aria-label="Adresse e-mail" formControlName="email">
+            <div *ngIf="email!.invalid && email!.dirty" class="invalid-message">
+                L'email ne doit comporter aucun caractères spéciaux ex: millesabord@mail.fr.
+            </div>
+            <input id="password" class="form-content__input" name="password" type="password" placeholder="Mot de passe" aria-label="Mot de passe" formControlName="password">
+            <div *ngIf="password!.invalid && password!.dirty" class="invalid-message">
+                Le mot de passe doit comporter entre 8 et 15 caractères, au mois une majuscule, une minuscule, deux chiffres et un caractère spécial.
+            </div>
+            <p>{{ errorMessage }}</p>
+            <div class="form-content__btn">
+                <button class="content-btn" name="login" type="submit" [disabled]="userForm.invalid" title="S'inscrire">S'inscrire</button>
+            </div>
+        </form>
+    </div>
+</div>

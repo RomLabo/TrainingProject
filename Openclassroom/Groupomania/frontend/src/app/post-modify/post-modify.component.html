@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="create-content">
+    <div class="create-post">
+        <h2 class="create-post__title"><span *ngIf="!postId">Créer</span><span *ngIf="postId">Modifier</span> votre post</h2>
+        <div class="create-post__form">
+            <form class="form-content" [formGroup]="postForm" (ngSubmit)="onModifyPost()">
+                <input id="post-title" class="form-content__title" name="post-title" type="text" aria-label="Titre du post" placeholder="Ajouter votre titre" formControlName="postTitle">
+                <div class="form-content__img" *ngIf="(imagePreview != undefined && imagePreview != '' && imagePreview != 'imageUrl')">
+                    <img [src]="imagePreview" alt="L'image du post">
+                </div>
+                <textarea name="post-text"
+                            id="post-text"
+                            cols="20" rows="7"
+                            class="form-content__text"
+                            formControlName="postText"
+                            aria-label="Texte du post"
+                            placeholder="Ajouter votre texte">
+                </textarea>  
+                <div class="form-content__btn">
+                    <button class="form-btn-add-img" type="button" [disabled]="!imagePreview || imagePreview === 'imageUrl'" (click)="deleteImagePreview()">
+                        <span class="fa-stack fa-2x form-btn-icon">
+                            <i class="far fa-image fa-stack-1x"></i>
+                            <i class="fas fa-slash fa-stack-1x"></i>
+                        </span>
+                    </button>
+                    <button class="form-btn-add-img" (click)="fileUpload.click()" type="button" title="Ajouter une image"><i class="far fa-image"></i></button>
+                    <button class="form-btn-add-post" name="addPost" type="submit" [disabled]="postForm.invalid" title="Poster"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="alert-danger" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <input aria-label="Image du post" type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+</div>

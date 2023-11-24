@@ -1,0 +1,39 @@
+$btn-after-background: radial-gradient(circle, #fd2d01 0%, #ffd7d7  100%);
+$text-color: #2e2e2e;
+
+$btn-style: (
+    main-btn: (
+        width: 3rem,
+        height: 3rem,
+        display: flex,
+        justify-content: center,
+        align-items: center,
+        border-radius: 50%,
+        background-color: #ffd7d7,
+        border: none,
+        font-size: 1.2rem,
+        position: relative,
+        z-index: 1,
+        cursor: pointer,
+        text-decoration: none,
+    )
+);
+
+$after-style: (
+    after-btn: (
+        after-content: "",
+        position: absolute,
+        pos-top: 0,
+        pos-right: 0,
+        pos-bottom: 0,
+        pos-left: 0,
+        display: flex,
+        justify-content: center,
+        align-items: center,
+        border-radius: 50%,
+        width: 100%,
+        opacity: 0,
+        z-index: -1,
+        transition: opacity 250ms,
+    )
+)

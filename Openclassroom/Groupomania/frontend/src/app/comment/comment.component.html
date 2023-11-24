@@ -1,0 +1,21 @@
+<li>
+    <p class="info-text">
+        Commenté par {{ commentUserName }} {{ commentUserFirstName }} 
+        <span *ngIf="commentDay < 1 && commentHour < 1 && commentMinute < 1">maintenant</span>
+        <span *ngIf="commentDay > 0 || commentHour > 0 || commentMinute > 0">il y a </span>
+        <span *ngIf="commentDay > 0">{{ commentDay }} jour<span *ngIf="commentDay > 1">s</span></span>
+        <span *ngIf="commentDay > 0 && commentHour > 0 && commentHour < 24 "> et </span>
+        <span *ngIf="commentHour > 0 && commentHour < 24">{{ commentHour }} heure<span *ngIf="commentHour > 1">s</span></span>
+        <span *ngIf="commentHour > 0 && commentMinute > 0 && commentMinute < 60"> et </span>
+        <span *ngIf="commentMinute > 0 && commentMinute < 60">{{ commentMinute }} minute<span *ngIf="commentMinute > 1">s</span></span>
+        <span class="info-admin" *ngIf="isAdmin === 1">  {{ commentUserMail }}</span></p>
+    <p>{{ commentContentText }}</p>
+    <div class="list-option" *ngIf="isAdmin === 1">
+        <button class="option-btn" (click)="deleteClick()" title="Supprimer"><i class="fas fa-trash-alt"></i></button>
+        <div  class="option-confirmation" *ngIf="clickedDeleteComment === true">
+            <p class="option-confirmation__text">Etes vous sur de vouloir supprimer ce post ?</p>
+            <button class="option-confirmation__btn" (click)="onDeleteOneComment()" title="Oui"><i class="fas fa-check"></i></button>
+            <button class="option-confirmation__btn" (click)="giveUpDelete()" title="Non"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</li>

@@ -1,0 +1,181 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.create-post-form {
+    display: flex;
+    justify-content: center;
+    height: 3.5rem;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    align-items: center;
+    @include mobile-only {
+        margin: 2rem 0 0 0;
+    }
+    &__input {
+        width: 40%;
+        padding: 0 0 0 2rem;
+        height: 3rem;
+        border: 2px solid #ffd7d7;
+        border-radius: 1rem;
+        @include mobile-only {
+            width: 80%;
+        }
+        @include tablet-only {
+            width: 60%;
+        }
+        &::placeholder {
+            font-size: 1.2rem;
+        }
+        &:focus, :active {
+            border: 2px solid #fd2d01;
+            border-radius: 0.5rem;
+        }
+    }   
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0 0 0;
+    padding: 0 0 2rem 0;
+    @include mobile-only {
+        flex-direction: column;
+    }
+    @include tablet-only {
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+}
+
+.post {
+    width: 60%;
+    height: auto;
+    padding: 0 0 2rem 0;
+    background-color: #ffd7d7;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile-only {
+        width: 100%;
+        border-radius: 0;
+    }
+    @include tablet-only {
+        width: 85%;
+    }
+    &__title {
+        width: 95%;
+        font-size: 1.6rem;
+    }
+    &__list {
+        list-style-type: none;
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 1rem;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.post-aside {
+    width: 25%;
+    height: auto;
+    padding: 0 0 2rem 0;
+    background-color: #ffd7d7;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile-only {
+        width: 100%;
+        border-radius: 0;
+        margin: 3rem 0 0 0;
+    }
+    @include tablet-only {
+        width: 85%;
+    }
+    &__title {
+        width: 85%;
+        font-size: 1.6rem;
+    }
+    &__list {
+        list-style-type: none;
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 1rem;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.list-group-item {
+    width: 90%;
+    height: auto;
+    box-shadow: 3px 3px 5px #e0bebe;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    padding: 2%;
+    animation: appear 2s 100ms cubic-bezier(.21,1.05,.31,.92);
+    position: relative;
+    z-index: 0;
+    &:hover {
+        opacity: 0.8;
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "\002B";
+        position: absolute;
+        font-size: 5rem;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        color: #fd2d01;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 250ms;
+    }
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation-delay: 100ms * $i;
+        }
+    }
+}
+
+.list-user-item {
+    width: 90%;
+    height: auto;
+    box-shadow: 3px 3px 5px #e0bebe;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    padding: 2%;
+    animation: appear 2s 100ms cubic-bezier(.21,1.05,.31,.92);
+}
+
+@keyframes appear {
+    from {
+        transform: translateY(6rem);
+        opacity: .2;
+    }
+    to {
+        transform: translateY(0);
+    }
+}

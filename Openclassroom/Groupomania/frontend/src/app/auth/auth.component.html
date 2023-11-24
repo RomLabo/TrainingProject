@@ -1,0 +1,15 @@
+<div class="home-form">
+    <img class="home-form__img" src="../../assets/background.jpg" alt="image d'arrière plan">
+    <div class="home-form__form">
+        <img class="form-logo" src="../../assets/logo-title.png" alt="Nom de l'entreprise">
+        <form class="form-content" [formGroup]="userLogForm" (ngSubmit)="onLogin()">
+            <input id="email" class="form-content__input" name="email" type="text" placeholder="E-mail" aria-label="Adresse e-mail" formControlName="email">
+            <input id="password" class="form-content__input" name="password" type="password" placeholder="Mot de passe" aria-label="Mot de passe" formControlName="password">
+            <p>{{ errorMessage }}</p>
+            <div class="form-content__btn">
+                <button class="content-btn" name="login" type="submit" title="Se connecter" [disabled]="userLogForm.invalid">Se connecter</button>
+                <a routerLink="signin" class="content-btn" title="S'inscrire">S'inscrire</a>
+            </div>
+        </form>
+    </div>
+</div>

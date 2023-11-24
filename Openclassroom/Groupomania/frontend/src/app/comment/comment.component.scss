@@ -1,0 +1,59 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.list-option {
+    width: 90%;
+    height: auto;
+    padding: 2%;
+    text-decoration: none;
+    color: $text-color;
+    display: flex;
+    height: 4rem;
+    gap: 3rem;
+    align-items: center;
+}
+
+.option-btn {
+    @include btn-style(main-btn);
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        @include after-style(after-btn);
+        background: $btn-after-background;
+    }
+}
+
+.info-text {
+    font-style: italic;
+}
+
+.info-admin {
+    margin: 0 0 0 2rem;
+    color: #fd2d01;
+}
+
+.option-confirmation {
+    display: flex;
+    gap: 1rem;
+    width: 70%;
+    justify-content: flex-end;
+    align-items: baseline;
+    &__text {
+        width: 60%;
+    }
+    &__btn {
+        @include btn-style(main-btn);
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            @include after-style(after-btn);
+            background: $btn-after-background;
+        }
+    }
+}

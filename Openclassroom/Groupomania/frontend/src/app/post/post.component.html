@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="post-content">
+    <div class="post">
+        <h2 class="post__title">Votre post</h2>
+        <div class="post__content">
+            <article class="list-item">
+                <h3 class="list-item__title">{{ postTitle }}</h3>
+                <div class="list-item__img" *ngIf="postImageUrl !== 'imageUrl'">
+                    <img [src]="postImageUrl" alt="L'image du post" class="list-img">
+                </div>
+                <p class="list-item__text">{{ postContent }}</p>
+                <div class="list-item__info">
+                    <p class="info-text">Posté par {{ postUserName }} {{ postUserFirstName }}. <span class="info-admin" *ngIf="isAdmin === 1">  {{ postUser }}</span></p>
+                    <div class="info-like">
+                        <button class="info-like__btn" name="addLike" type="button" [disabled]="numberOfLike == -1" (click)="onAddLike()" title="Liker">
+                            <i class="fas fa-long-arrow-alt-up"></i>
+                        </button>
+                        <span class="info-like__number">{{ postLike }}</span>
+                        <button class="info-like__btn" name="addDislike" type="button" [disabled]="numberOfLike == 1" (click)="onAddDislike()" title="Disliker">
+                            <i class="fas fa-long-arrow-alt-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="list-item__option" *ngIf="isAdmin === 1 || isUser === postUser">
+                    <a class="option-btn" *ngIf="isUser === postUser" [routerLink]="['modify']" title="Modifier"><i class="far fa-edit"></i></a>
+                    <button class="option-btn" (click)="deleteClick()" title="Supprimer"><i class="fas fa-trash-alt"></i></button>
+                    <div class="option-confirmation" *ngIf="clickedDeletePost === true">
+                        <p class="option-confirmation__text">Etes vous sur de vouloir supprimer ce post ?</p>
+                        <button class="option-confirmation__btn" (click)="onDeleteOnePost()" title="Oui"><i class="fas fa-check"></i></button>
+                        <button class="option-confirmation__btn" (click)="giveUpDelete()" title="Non"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="comment">
+        <h2 class="comment__title">Commentaires</h2>
+        <form class="comment__form" [formGroup]="commentForm" (ngSubmit)="onAddComment()">
+            <textarea name="comment-text"
+                        id="comment-text"
+                        cols="30" rows="7"
+                        class="comment-form-text"
+                        formControlName="commentText"
+                        aria-label="Texte du Commentaire"
+                        placeholder="Ajouter votre commentaire">
+            </textarea>
+            <button class="comment-form-btn" name="addComment" [disabled]="commentForm.invalid" type="submit" title="Commenter"><i class="far fa-edit"></i></button>
+        </form>
+        <ul class="comment__list">
+            <app-comment class="list-group-item" *ngFor="let comment of comments"
+                            [commentUserName]="comment.user_name_comment"
+                            [commentUserFirstName]="comment.user_firstname_comment"
+                            [commentContent]="comment.content"
+                            [commentId]="comment.id"
+                            [commentUserMail]="comment.user_email_comment"
+                            [commentDay]="comment.nb_days"
+                            [commentHour]="comment.nb_hours"
+                            [commentMinute]="comment.nb_minutes">
+            </app-comment>
+        </ul>
+    </div>
+</div>
